@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarComponent } from './components/car/car.component';
+import { CarsComponent } from './components/cars/cars.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CarComponent
+    CarComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,

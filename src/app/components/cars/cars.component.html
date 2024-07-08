@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Montadora</th>
+        <th>Preço</th>
+        <th>Ano</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <td>{{car.id}}</td>
+        <td>{{car.name | uppercase}}</td>
+        <td>{{car.assembler}}</td>
+        <td>{{car.price}}</td>
+        <td>{{car.year}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
