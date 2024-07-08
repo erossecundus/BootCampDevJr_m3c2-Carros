@@ -1,17 +1,28 @@
-<div class="row text-center">
-  <div class="col">
-    {{car.id}}
-  </div>
-  <div class="col">
-    {{car.name | uppercase}}
-  </div>
-  <div class="col">
-    {{car.assembler}}
-  </div>
-  <div class="col">
-    {{car.price}}
-  </div>
-  <div class="col">
-    {{car.year}}
-  </div>
+<div class="container bg-light">
+  <h3>Cadastro de Carros:</h3>
+    <form>
+      <div class="row px-3">
+        <label for="name" class="col-form-label col-2 mb-1">Nome:</label>
+        <div class="col-10">
+          <input type="text" class="form-control" name="name" id="name">
+        </div>
+      </div>
+      <div class="row px-3">
+        <label for="assembler" class="col-form-label col-2 mb-1">Montadora:</label>
+        <div class="col-10">
+          <input type="text" class="form-control" name="assembler" id="assembler">
+        </div>
+      </div>
+      <div class="row px-3">
+        <label for="price" class="col-form-label col-2 mb-1">Preço:</label>
+        <div class="col-4">
+          <input type="text" class="form-control" name="price" id="price">
+        </div>
+        <label for="year" class="col-form-label col-2 mb-1">Ano:</label>
+        <div class="col-4">
+          <input type="text" class="form-control" name="year" id="year">
+        </div>
+      </div>
+      <button class="btn btn-primary mb-3">Salvar</button>
+    </form>
 </div>
