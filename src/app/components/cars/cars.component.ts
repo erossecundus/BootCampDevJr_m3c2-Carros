@@ -11,13 +11,9 @@ export class CarsComponent {
   // obj vazio do tipo Car; passa do pai para o filho pelo input
   car : Car = {} as Car;
   isUpdate : boolean = false;
-  idCount : number = 4;                       // começa em 4 para os testes
+  idCount : number = 1;
 
-  cars : Car[] = [
-    {id:1, name:'corsa', assembler:'Chevrolet', price:20000, year:2015},
-    {id:2, name:'palio', assembler:'Fiat', price:25000, year:2017},
-    {id:3, name:'fusca', assembler:'Volkswagen', price:30000, year:1975}
-  ];
+  cars : Car[] = [];
 
   // método para salvar um car no array cars
   saveCar() {
