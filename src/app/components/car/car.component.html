@@ -1,28 +1,33 @@
 <div class="container bg-light">
   <h3>Cadastro de Carros:</h3>
-    <form>
+    <!-- #nomeDado = "diretivaAngular" (usado para validar no button)-->
+    <form #formBook="ngForm">
       <div class="row px-3">
         <label for="name" class="col-form-label col-2 mb-1">Nome:</label>
         <div class="col-10">
-          <input type="text" class="form-control" name="name" id="name">
+          <!-- [()] caixa de banana: two-way Data Binding --------------->
+          <!-- [(ngModel)]="obj" associa input e obj car em tempo real -->
+          <input type="text" class="form-control" name="name" id="name" [(ngModel)]="car.name" required>
         </div>
       </div>
       <div class="row px-3">
         <label for="assembler" class="col-form-label col-2 mb-1">Montadora:</label>
         <div class="col-10">
-          <input type="text" class="form-control" name="assembler" id="assembler">
+          <input type="text" class="form-control" name="assembler" id="assembler" [(ngModel)]="car.assembler" required>
         </div>
       </div>
       <div class="row px-3">
         <label for="price" class="col-form-label col-2 mb-1">Preço:</label>
         <div class="col-4">
-          <input type="text" class="form-control" name="price" id="price">
+          <input type="text" class="form-control" name="price" id="price" [(ngModel)]="car.price" required>
         </div>
         <label for="year" class="col-form-label col-2 mb-1">Ano:</label>
         <div class="col-4">
-          <input type="text" class="form-control" name="year" id="year">
+          <input type="text" class="form-control" name="year" id="year" [(ngModel)]="car.year" required>
         </div>
       </div>
-      <button class="btn btn-primary mb-3">Salvar</button>
+      <!-- Event Biding: (evento)="método()" -->
+      <!-- Property Biding: [prop.]="testeBooleano" a partir da validação (required`s) de inputs do #formBook -->
+      <button class="btn btn-primary mb-3" (click)="save()" disabled="true" [disabled]="formBook.invalid">Salvar</button>
     </form>
 </div>

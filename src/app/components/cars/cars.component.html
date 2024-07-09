@@ -1,6 +1,10 @@
-<div class="container">
+<!-- [input]=obj : passa o obj do pai para o componente car filho --->
+<!-- (saveEmiter)="método()" : avisa filho q vai chamar método pai -->
+<app-car [car]="car" (saveEmitter)="saveCar()"></app-car>
+
+<div class="container bg-light">
   <h3>Carros Cadastrados:</h3>
-  <table class="table">
+  <table class="table table-light border-top">
     <thead>
       <tr>
         <th>#</th>
@@ -11,6 +15,7 @@
       </tr>
     </thead>
     <tbody>
+      <!-- *ngFor: diretivas do Angular (cria um for dentro do html) -->
       <tr *ngFor="let car of cars">
         <td>{{car.id}}</td>
         <td>{{car.name | uppercase}}</td>
